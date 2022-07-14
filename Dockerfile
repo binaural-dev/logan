@@ -57,7 +57,7 @@ RUN npm install -g rtlcss
 #add pandas and another
 RUN pip3 install num2words xlwt xlrd openpyxl xlwt pytest-odoo pandas wheel html2text
 # Install Odoo
-ENV ODOO_VERSION 14.0
+ENV ODOO_VERSION 15.0
 #ARG ODOO_RELEASE=latest
 #ARG ODOO_SHA=aff621cdd7e1ee2e27769d26356954cc8d143be1
 ARG ODOO_RELEASE=latest
