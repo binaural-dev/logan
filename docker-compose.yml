@@ -1,16 +1,16 @@
 version: "2.3"
 services:
-  web-integra14:
+  web-logan:
     #image: odoo:14
     build:
       context: .
-    container_name: integra14_container
+    container_name: logan_container
     depends_on:
-      - db-integra14
+      - db-logan
     ports:
-      - "15000:8069"
+      - "15080:8069"
     volumes:
-      - odoo-web-integra14:/var/lib/odoo
+      - odoo-web-logan:/var/lib/odoo
       - ./config:/etc/odoo
       - ./enterprise:/mnt/extra-addons
       - ./modules:/mnt/custom-addons
@@ -20,7 +20,7 @@ services:
     #devices:
     #  - "/dev/ttyACM0:/dev/ttyACM0"
     restart: always
-  db-integra14:
+  db-logan:
     image: postgres:13
     environment:
       - POSTGRES_DB=postgres
@@ -28,7 +28,7 @@ services:
       - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - odoo-db-integra14:/var/lib/postgresql/data/pgdata
+      - odoo-db-logan:/var/lib/postgresql/data/pgdata
 volumes:
-  odoo-web-integra14:
-  odoo-db-integra14:
+  odoo-web-logan:
+  odoo-db-logan:
