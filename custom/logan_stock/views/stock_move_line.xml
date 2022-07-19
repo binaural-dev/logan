@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="stock_move_line_tree_extend" model="ir.ui.view">
+            <field name="name">stock.move.line.tree.extend</field>
+            <field name="model">stock.move.line</field>
+            <field name="inherit_id" ref="stock.view_move_line_tree" />
+            <field name="arch" type="xml">
+                <field name="product_id" position="after">
+                    <field name="user" />
+                    <field name="reason" />
+                </field>
+            </field>
+
+        </record>
+        
+    
+    </data>
+    
+
+</odoo>

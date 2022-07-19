@@ -1,0 +1,30 @@
+
+Version 15.0.0.1 : (19-11-21)
+		- Solve mutli company issue.
+
+Date : 31-12-2021
+Version : 15.0.0.2
+    - Solve Traceback error for Loyalty Configuration
+    - Solve issue which is generated while register payment.
+
+Date : 17-02-2022
+Version : 15.0.0.3
+    - Solve the issue of generating multiple delivery orders for the same pos order while validate payment with partial payment multiple times for one order
+    - Solve the issue of showing all the enable currency while Enable Multi-Currency Conversation
+    - Make proper view for product variant wizard
+
+Version 15.0.0.4 : (01-03-22)
+        - Solved amount currency value passing issue.
+        - Allow user to pay multiple times in multi currency.
+
+Version 15.0.0.5 : (04-03-22)
+        - Display other currency in payment lines and also in receipt.
+
+Version 15.0.0.6 : (31-03-22)
+        - Compitable with brnach, branch_accounting_report, bi_odoo_mrp_multi_branch, bi_branch_pos
+
+Version 15.0.0.7 : (16-05-22)
+        -- Solved product load issue, In this issue load field image_1920 insted of this used imageUrl and load product image.
+
+Version 15.0.0.8 : (10-06-22)
+        -- Update domain for the load product template.

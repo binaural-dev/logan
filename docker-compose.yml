@@ -1,0 +1,34 @@
+version: "2.3"
+services:
+  web-logan:
+    #image: odoo:14
+    build:
+      context: .
+    container_name: logan_container
+    depends_on:
+      - db-logan
+    ports:
+      - "15080:8069"
+    volumes:
+      - odoo-web-logan:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./enterprise:/mnt/extra-addons
+      - ./modules:/mnt/custom-addons
+      #- ./custom:/mnt/another-addons
+    environment:
+      - PYTHONUNBUFFERED=0
+    #devices:
+    #  - "/dev/ttyACM0:/dev/ttyACM0"
+    restart: always
+  db-logan:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db-logan:/var/lib/postgresql/data/pgdata
+volumes:
+  odoo-web-logan:
+  odoo-db-logan:
