@@ -96,7 +96,7 @@ operating-Unit Operation for POS,operating-Unit Operation for Sales,operating-Un
         'security/branch_pos_security.xml',
         'views/pos_branch_view.xml',
     ],
-    'qweb': ['static/src/xml/pos.xml'],
+    'qweb': ['static/src/xml/*.xml'],
     "auto_install": False,
     "installable": True,
     'license': 'OPL-1',

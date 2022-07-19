@@ -1,1 +1,1 @@
-from . import test_rules_user
+from . import test_stock_quant , common, common2, test_stock_move_line
