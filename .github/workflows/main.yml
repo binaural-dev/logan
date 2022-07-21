@@ -8,5 +8,5 @@ jobs:
       - name: Inicio del servicio
         run: docker-compose up -d
       - name: Ingresar al contenedor
-        run: docker exect -it logan_container bash
+        run: docker exec -it logan_container bash
         
