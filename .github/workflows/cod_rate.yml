@@ -1,5 +1,7 @@
 name: Evaluacion de codigo con pylint/OCA
-on: push
+on: 
+  push:
+   branches: [staging]
 jobs:
   test:
     runs-on: ubuntu-latest
