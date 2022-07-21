@@ -8,4 +8,4 @@ jobs:
       - name: Instalar pylint OCA
         run: pip3 install --upgrade git+https://github.com/oca/pylint-odoo.git
       - name: Evaluar carpeta custom
-        run: pylint custom --disable=missing-docstring --disable=pointless-statement --disable import-error --disable=missing-final-newline
+        run: pylint --load-plugins=pylint_odoo -e odoolint custom
