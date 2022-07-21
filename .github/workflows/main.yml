@@ -9,4 +9,8 @@ jobs:
         run: docker-compose up -d
       - name: Ingresar al contenedor
         run: docker exec -it logan_container bash
+      - name: Test
+        run: odoo -i logan_stock --log-level=test -d logan --test-enable --stop-after-init -p 10989 -r odoo -w odoo
+
+
         
