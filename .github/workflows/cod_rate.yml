@@ -1,4 +1,4 @@
-name: Docker Compose Actions Workflow
+name: Evaluacion de codigo con pylint/OCA
 on: push
 jobs:
   test:
@@ -7,5 +7,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Instalar pylint OCA
         run: pip3 install --upgrade git+https://github.com/oca/pylint-odoo.git
-      - name: Ingresar al contenedor
-        run: pylint --load-plugins=pylint_odoo -e odoolint custom
+      - name: Evaluar carpeta custom
+        run: pylint custom --disable=missing-docstring --disable=pointless-statement --disable import-error --disable=missing-final-newline
